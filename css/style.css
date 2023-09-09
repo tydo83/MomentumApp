@@ -1,3 +1,27 @@
 .hidden {
     display: none;
 }
+
+/* body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: aliceblue;
+} */
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;  /* 배경색은 원하는대로 변경하세요. */
+    color: aliceblue;
+}
+
+#clock, #loginForm, #greeting, #weather, #toDoForm, #todDoList, #quote {
+    width: 80%;  /* 원하는 너비로 조정하세요. */
+    margin-bottom: 20px;  /* 각 항목 사이의 간격을 조정하세요. */
+}
+
+/* 기타 스타일링은 필요에 따라 추가하세요. */
