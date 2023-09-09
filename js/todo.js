@@ -1,9 +1,8 @@
 const toDoForm = document.querySelector("#toDoForm");
 const toDoInput = document.querySelector("#toDoForm input");
-const toDoList = document.getElementById("todDoList");
+const toDoList = document.getElementById("toDoList");
 
-const toDoArray = [];
-
+let toDoArray = [];
 
 //main event handler comprised of three minor funcs
 function toDoHandler(event) {
@@ -26,11 +25,11 @@ function paintToDos(newToDo) {
     const span = document.createElement("span")
     span.innerText = newToDo.text;
     const button = document.createElement("button");
-    button.innerText = "X"
+    button.innerText = "❌"
     button.addEventListener("click", deleteToDo)
-    li.appendChild("span");
-    li.appendChild("button");
-    todDoList.appendChild("li");
+    li.appendChild(span);
+    li.appendChild(button);
+    todDoList.appendChild(li);
   }
   
 //save todos in the local storage
@@ -42,7 +41,7 @@ function saveToDos() {
 function deleteToDo(event) {
     const li = event.target.parentElement;
     li.remove();
-    toDos = toDos.filter((toDo) => toDo.id !== parseInt(li.id));
+    toDoArray = toDoArray.filter((toDo) => toDo.id !== parseInt(li.id));
     saveToDos();
 }
 
